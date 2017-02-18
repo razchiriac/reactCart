@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import ItemList from './components/list';
-import items from './products';
+import List from './components/List';
+import items from './items';
 import logo from './logo.svg';
 import _ from '../bower_components/underscore/underscore';
 import '../bower_components/bootstrap/dist/css/bootstrap.css';
 import '../bower_components/bootstrap/dist/css/bootstrap-grid.min.css';
 import '../bower_components/bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import './Cart.css';
 
-export default class App extends Component {
+export default class Cart extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -58,7 +58,7 @@ export default class App extends Component {
 
   render() {
     return (
-			<div className="App">
+			<div className="Cart">
 				<div className="container">
 					<header className="cart-header">
 						<strong>React</strong>Cart
@@ -78,7 +78,7 @@ export default class App extends Component {
 										</tr>
 									</thead>
 									
-									<ItemList 
+									<List 
 										items={this.state.items} 
 										removeItem={this.removeItem.bind(this)}
 										changeQty={this.changeQty.bind(this)}

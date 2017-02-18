@@ -1,24 +1,24 @@
-.App {
+.Cart {
 
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
+.Cart-logo {
+  animation: Cart-logo-spin infinite 20s linear;
   height: 80px;
 }
 
-.App-header {
+.Cart-header {
   background-color: #222;
   padding: 20px;
   color: white;
 	text-align: center;
 }
 
-.App-intro {
+.Cart-intro {
   font-size: large;
 }
 
-@keyframes App-logo-spin {
+@keyframes Cart-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }

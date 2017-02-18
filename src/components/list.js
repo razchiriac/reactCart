@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Item from './item';
+import Item from './Item';
 import _ from '../../bower_components/underscore/underscore';
 
-export default class ItemList extends Component {
+export default class List extends Component {
 	renderItems() {
 		const props = _.omit(this.props, 'items');
 
