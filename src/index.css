@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: sans-serif;
 	background-color: #fafafa;
+	font-size: 14px;
 }
 .container{
 	max-width: 840px

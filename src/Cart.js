@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import List from './components/List';
 import items from './items';
-import logo from './logo.svg';
 import _ from '../bower_components/underscore/underscore';
 import '../bower_components/bootstrap/dist/css/bootstrap.css';
 import '../bower_components/bootstrap/dist/css/bootstrap-grid.min.css';
@@ -36,14 +35,14 @@ export default class Cart extends Component {
 	}		
 	
 	removeItem(itemId) {
-		this.state.items = _.without(this.state.items, _.findWhere(this.state.items, {
+		var items = _.without(this.state.items, _.findWhere(this.state.items, {
 		  id: itemId
 		}));
-		this.setState({ items: this.state.items });
+		this.setState({ items: items });		
 		this.handleSubTotal();
 	}
 	
-	handleSubTotal = (itemTotal = 0) => {
+	handleSubTotal = (itemTotal = 0) => {	
 		_.each(this.state.items, function(item){
 			itemTotal += item.price * item.quantity;
 		});
@@ -82,6 +81,7 @@ export default class Cart extends Component {
 										items={this.state.items} 
 										removeItem={this.removeItem.bind(this)}
 										changeQty={this.changeQty.bind(this)}
+										handleSubTotal={this.handleSubTotal.bind(this)}
 									/>
 
 									<tfoot>

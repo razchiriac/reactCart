@@ -11,8 +11,12 @@ export default class Item extends Component {
     };
 	}
 	
-	componentDidMount(){
+	getInitialState(){
 		this.setState({ itemTotal: this.props.quantity * this.props.price });
+	}
+	
+	componentWillUnmount(){
+		this.props.handleSubTotal();
 	}
 	
 	handleChange(itemId, e){
@@ -30,13 +34,12 @@ export default class Item extends Component {
 						</a>
 						<div className="media-body">
 							<h5 className="media-heading"><a href="#">{this.props.name}</a></h5>
-							<h6 className="media-heading"> by <a href="#">{this.props.brand}</a></h6>
-							<span>Status: </span><span className="text-success"><strong>In Stock</strong></span>
+							<p className="media-heading"> by <a href="#">{this.props.brand}</a></p>
 						</div>
 					</div>
 				</td>
 				<td className="col-sm-1 col-md-1">
-					<input type="number" className="form-control" value={this.props.quantity} onChange={this.handleChange.bind(this, this.props.id)} />
+					<input type="number" className="form-control" min="1" max={this.props.limit} value={this.props.quantity} onChange={this.handleChange.bind(this, this.props.id)} />
 				</td>
 				<td className="col-sm-1 col-md-1 text-center">
 					<strong className="itemPrice">${this.props.price.toFixed(2)}</strong>				
