@@ -1,5 +1,5 @@
 ## Simple shopping Cart
-it's not final yet, I will keep pushing new changes please watch, star and review.
+I will keep pushing new changes please watch, star and feel free to review and contribute 🙂
 
 - React v15.4.2
 - JSX
