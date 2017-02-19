@@ -131,6 +131,10 @@ export default class Cart extends Component {
 						</div>
 					</div>
 					<br/>
+					<div className="text-center">
+						<a className="text-muted" href="https://github.com/abudayah/reactCart">github</a>
+					</div>
+					<br/>
 					<br/>
 	      </div>
       </div>
