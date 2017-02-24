@@ -1,7 +1,8 @@
 {
   "name": "react-cart",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+	"url" : "https://github.com/abudayah/reactCart",
   "devDependencies": {
     "react-scripts": "0.8.5"
   },

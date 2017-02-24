@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import List from './components/List';
 import items from './items';
 import _ from '../bower_components/underscore/underscore';
-import '../bower_components/bootstrap/dist/css/bootstrap.css';
-import '../bower_components/bootstrap/dist/css/bootstrap-grid.min.css';
 import '../bower_components/bootstrap/dist/css/bootstrap.min.css';
+import '../bower_components/bootstrap/dist/css/bootstrap-grid.min.css';
 import './Cart.css';
 
 export default class Cart extends Component {
